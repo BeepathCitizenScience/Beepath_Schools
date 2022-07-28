@@ -17,3 +17,4 @@
     - Mean Squared Displacement: Code, figures and FIT of the MSD for several cases (homogenous, heterogeneous, using and without using linear interpolation...)
     - Autocorrelation velocities: Code, figures and FIT of the Autocorrelation of the velocities.
     - Urban planning perspective: Code and figures comparing the velocities of different schools and obtaining the optimal path, the reorientation, the tortuosity...
+    - Maximum Likelihood estimation: Code for the estimation of the exponential Ornstein-Uhlenbeck parametres and comparision between schools
