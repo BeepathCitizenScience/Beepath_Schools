@@ -1,4 +1,6 @@
-# Beepath-Schools
+# Pedestrian mobility in Schools: Beepath Project
+
+This repository contains the code and the mobility data used for the scientific publication. The data was collected through a citizen science experiment in which students from different schools in Barcelona participated to try to better understand the mobility around schools, as well as to find and solve possible access difficulties and improve urban furniture. Participants used a smartphone app to track their journey from home to school (or the other way around). The data collected for each user consists of an anonymized nickname, the geolocation (latitude and longitude) and the timestamp.
 
 1. The folder "original data" contains the original data collected in the experiment.
 
