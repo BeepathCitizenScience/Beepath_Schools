@@ -27,10 +27,10 @@ This repository contains the code and the mobility data used for the scientific 
 4. The folder "Results. txt files" contains several .txt files with the results for the Mean Squared Displacement and the Autocorrelation for several cases (interpolated data, no interpolated data, confidence intervals, etc).
 
     - The Jupyter Notebook "Mean Squared Displacement.ipynb" generates: 
-    
-        · difussion_origin_0.txt: Result for the Mean Squared Displacement MSD(T) for T up to 600 seconds. For the case of origin at T=0.
-        · difussion_origin_0.interpolation.txt: MSD(T) for the case of origin at T=0 but using the interpolated data.
-        · CI_95_origin_0_minus: Confidence interval of 95% for the case of MSD(T) (origin at T=0). Lower part.
+        
+        a. difussion_origin_0.txt: Result for the Mean Squared Displacement MSD(T) for T up to 600 seconds. For the case of origin at T=0.
+        b. difussion_origin_0.interpolation.txt: MSD(T) for the case of origin at T=0 but using the interpolated data.
+        c. CI_95_origin_0_minus: Confidence interval of 95% for the case of MSD(T) (origin at T=0). Lower part.
         · CI_95_origin_0_minus_interpolation: Confidence interval of 95% for the case of MSD(T) (origin at T=0). Lower part. Interpolated data.
         · CI_95_origin_0_plus: Confidence interval of 95% for the case of MSD(T) (origin at T=0). Upper part.
         · CI_95_origin_0_plus_interpolation:  Confidence interval of 95% for the case of MSD(T) (origin at T=0). Upper part. Interpolated data.
