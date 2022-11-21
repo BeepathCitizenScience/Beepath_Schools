@@ -26,8 +26,23 @@ This repository contains the code and the mobility data used for the scientific 
 
 4. The folder "Results. txt files" contains several .txt files with the results for the Mean Squared Displacement and the Autocorrelation for several cases (interpolated data, no interpolated data, confidence intervals, etc).
 
-    - From the Jupyter Notebook "Mean Squared Displacement.ipynb": 
-    - From the Jupyter Notebook "Autocorrelation velocities.ipynb":
+    - The Jupyter Notebook "Mean Squared Displacement.ipynb" generates: 
+        · difussion_origin_0.txt: Result for the Mean Squared Displacement MSD(T) for T up to 600 seconds. For the case of origin at T=0.
+        · difussion_origin_0.interpolation.txt: MSD(T) for the case of origin at T=0 but using the interpolated data.
+        · CI_95_origin_0_minus: Confidence interval of 95% for the case of MSD(T) (origin at T=0). Lower part.
+        · CI_95_origin_0_minus_interpolation: Confidence interval of 95% for the case of MSD(T) (origin at T=0). Lower part. Interpolated data.
+        · CI_95_origin_0_plus: Confidence interval of 95% for the case of MSD(T) (origin at T=0). Upper part.
+        · CI_95_origin_0_plus_interpolation:  Confidence interval of 95% for the case of MSD(T) (origin at T=0). Upper part. Interpolated data.
+        · difussion.txt: Result for the Mean Squared Displacement MSD(T) for T up to 600 seconds. For the case of averaging over all origins (homogeneous).
+        · difussion.interpolation.txt: MSD(T) for the homogeneous case but using the interpolated data.     
+        · ci_95_msd_homogenous_minus.txt: Confidence interval of 95% for the case of MSD(T) (homogeneous case). Lower part.
+        · ci_95_msd_homogenous_minus_interpolation.txt: Confidence interval of 95% for the case of MSD(T) (homogeneous case). Lower part. Interpolated data.
+        · ci_95_msd_homogenous_plus.txt: Confidence interval of 95% for the case of MSD(T) (homogeneous case). Upper part.
+        · ci_95_msd_homogenous_plus_interpolation.txt: Confidence interval of 95% for the case of MSD(T) (homogeneous case). Upper part. Interpolated data.
+
+
+
+    - The Jupyter Notebook "Autocorrelation velocities.ipynb" generates:
 
 5. Regarding the code, there are several Python Notebooks that reproduce the mobility results and figures. All the notebooks contain a detailed description of the code and of the study.
 
