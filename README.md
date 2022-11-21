@@ -2,9 +2,8 @@
 
 This repository contains the code and the mobility data used for the scientific publication. The data was collected through a citizen science experiment in which students from different schools in Barcelona participated to try to better understand the mobility around schools, as well as to find and solve possible access difficulties and improve urban furniture. Participants used a smartphone app to track their journey from home to school (or the other way around). The data collected for each user consists of an anonymized nickname, the geolocation (latitude and longitude) and the timestamp.
 
-1. The folder "original data" contains the raw data collected in the experiment, composed of 262 csv-files (corresponding to each participant journey) and 161,009 GPS locations. The data-files contain 8 columns, which are:
+1. The folder "original data" contains the raw data collected in the experiment, composed of 262 csv-files (corresponding to each participant journey) and 161,009 GPS locations. The data-files contain 7 columns, which are:
 
-    - Unnamed 0: Index of each row.
     - course: the direction in which the device is travelling, mesured in degrees and relative to the north.
     - haccuracy: radius of uncertainty for the location, mesured in metres.
     - speed: instantaneous velocity of the device (obtained by the Android/IOS servers) in metres/second.
@@ -14,7 +13,7 @@ This repository contains the code and the mobility data used for the scientific 
     - nickname: anonymous nickname of the participant
     
 
-2. The folder "processed data" contains the processed and cleaned data (a .csv file for each participant, with the same file-name as the raw data but adding the suffix "_processed" to each .csv file. The data is reduced to 83 users and 36,091 GPS locations. The column "Unnamed 0:" is removed from the data-set and 3 new columns are added corresponding to the time increment, the instantaneous velocity and the distance between GPS records.
+2. The folder "processed data" contains the processed and cleaned data (a .csv file for each participant, with the same file-name as the raw data but adding the suffix "_processed" to each .csv file. The data is reduced to 83 users and 36,091 GPS locations. The 3 new columns are added corresponding to the time increment, the instantaneous velocity and the distance between GPS records (so the number of columns is increased to 10).
 
     - $\Delta t$: time difference between consecutive records in seconds (computed in advance: $\Delta t (i) = t(i+1) - t(i)$. So the last element is NaN).
     - d: distance between consecutive GPS records in metres (computed in advance, so the last element is NaN).
