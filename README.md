@@ -4,14 +4,14 @@ This repository contains the code and the mobility data used for the scientific 
 
 1. The folder "original data" contains the raw data collected in the experiment, composed of 262 csv-files (corresponding to each participant journey) and 161,009 GPS locations. The data-files contain 8 columns, which are:
 
-    -Unnamed 0: Index of each row.
-    -course: the direction in which the device is travelling, mesured in degrees and relative to the north.
-    -haccuracy: radius of uncertainty for the location, mesured in metres.
-    -speed: instantaneous velocity of the device (obtaine by the Android/IOS servers) in metres/second.
-    -latitude: latitude coordinate in degrees
-    -longitude: longitude coordinate in degrees
-    -time: timestamp in which the geo-location is recorded
-    -nickname: anonymous nickname of the participant
+    - Unnamed 0: Index of each row.
+    - course: the direction in which the device is travelling, mesured in degrees and relative to the north.
+    - haccuracy: radius of uncertainty for the location, mesured in metres.
+    - speed: instantaneous velocity of the device (obtaine by the Android/IOS servers) in metres/second.
+    - latitude: latitude coordinate in degrees
+    - longitude: longitude coordinate in degrees
+    - time: timestamp in which the geo-location is recorded
+    - nickname: anonymous nickname of the participant
     
 
 2. The folder "processed data" contains the processed and cleaned data (a .csv file for each participant, with the same file-name as the raw data but adding the suffix _processed to each .csv file). The data is reduced to 83 users and 36,091 GPS locations. The column "Unnamed 0:" is removed from the data-set and 3 new columns are added corresponding to the time increment, the instantaneous velocity and the distance between GPS records.
