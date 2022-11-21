@@ -29,28 +29,37 @@ This repository contains the code and the mobility data used for the scientific 
     - The Jupyter Notebook "Mean Squared Displacement.ipynb" generates: 
         
         - difussion_origin_0.txt: Result for the Mean Squared Displacement MSD(T) for T up to 600 seconds. For the case of origin at T=0.
-        - difussion_origin_0.interpolation.txt: MSD(T) for the case of origin at T=0 but using the interpolated data.
-        - CI_95_origin_0_minus: Confidence interval of 95% for the case of MSD(T) (origin at T=0). Lower part.
-        - CI_95_origin_0_minus_interpolation: Confidence interval of 95% for the case of MSD(T) (origin at T=0). Lower part. Interpolated data.
-        · CI_95_origin_0_plus: Confidence interval of 95% for the case of MSD(T) (origin at T=0). Upper part.
-        · CI_95_origin_0_plus_interpolation:  Confidence interval of 95% for the case of MSD(T) (origin at T=0). Upper part. Interpolated data.
-        · difussion.txt: Result for the Mean Squared Displacement MSD(T) for T up to 600 seconds. For the case of averaging over all origins (homogeneous).
-        · difussion.interpolation.txt: MSD(T) for the homogeneous case but using the interpolated data.     
-        · ci_95_msd_homogenous_minus.txt: Confidence interval of 95% for the case of MSD(T) (homogeneous case). Lower part.
-        · ci_95_msd_homogenous_minus_interpolation.txt: Confidence interval of 95% for the case of MSD(T) (homogeneous case). Lower part. Interpolated data.
-        · ci_95_msd_homogenous_plus.txt: Confidence interval of 95% for the case of MSD(T) (homogeneous case). Upper part.
-        · ci_95_msd_homogenous_plus_interpolation.txt: Confidence interval of 95% for the case of MSD(T) (homogeneous case). Upper part. Interpolated data.
-
+        - difussion_origin_0_interpolation.txt: MSD(T) for the case of origin at T=0 but using the interpolated data.
+        - CI_95_origin_0_minus.txt: Confidence interval of 95% for the case of MSD(T) (origin at T=0). Lower part.
+        - CI_95_origin_0_minus_interpolation.txt: Confidence interval of 95% for the case of MSD(T) (origin at T=0). Lower part. Interpolated data.
+        - CI_95_origin_0_plus.txt: Confidence interval of 95% for the case of MSD(T) (origin at T=0). Upper part.
+        - CI_95_origin_0_plus_interpolation.txt:  Confidence interval of 95% for the case of MSD(T) (origin at T=0). Upper part. Interpolated data.
+        - difussion.txt: Result for the Mean Squared Displacement MSD(T) for T up to 600 seconds. For the case of averaging over all origins (homogeneous).
+        - difussion.interpolation.txt: MSD(T) for the homogeneous case but using the interpolated data.     
+        - ci_95_msd_homogenous_minus.txt: Confidence interval of 95% for the case of MSD(T) (homogeneous case). Lower part.
+        - ci_95_msd_homogenous_minus_interpolation.txt: Confidence interval of 95% for the case of MSD(T) (homogeneous case). Lower part. Interpolated data.
+        - ci_95_msd_homogenous_plus.txt: Confidence interval of 95% for the case of MSD(T) (homogeneous case). Upper part.
+        - ci_95_msd_homogenous_plus_interpolation.txt: Confidence interval of 95% for the case of MSD(T) (homogeneous case). Upper part. Interpolated data.
 
 
     - The Jupyter Notebook "Autocorrelation velocities.ipynb" generates:
+   
+        - autocorrelation.txt: Result for the Auto-correlation of velocities C(T) for T up to 600 seconds.
+        - autocorrelation_interpolation.txt: C(T) using the velocities and the interpolated data.
+        - autocorrelation_log.txt: Result for the Auto-correlation of logarithmic velocities C(T) for T up to 600 seconds.
+        - autocorrelation_interpolation_log.txt: C(T) using the logarithmic velocities and the interpolated data.
+        - autocorrelation_interpolation_CI_minus.txt: Confidence interval of 95% of C(T) (velocities). Lower part.
+        - autocorrelation_interpolation_CI_minus_log.txt: Confidence interval of 95% of C(T) (logarithmic velocities). Lower part.
+        - autocorrelation_interpolation_CI_plus.txt: Confidence interval of 95% of C(T) (velocities). Upper part.
+        - autocorrelation_interpolation_CI_plus_log.txt: Confidence interval of 95% of C(T) (logarithmic velocities). Upper part.
+      
 
-5. Regarding the code, there are several Python Notebooks that reproduce the mobility results and figures. All the notebooks contain a detailed description of the code and of the study.
+5. Regarding the code, there are several Python Notebooks that reproduce the mobility results and figures (and txt files). All the notebooks contain a detailed description of the code and of the study.
 
-    - Data processing:  Contains an explanation of the three stages of data processing and cleaning with examples and the linear interpolation procedure. 
-    - Functions. Mobility characterisation: Contains a grouping of the functions used to perform the calculations and characterise the mobility (calculation of time increments, distances and velocities. The mean squared displacement, autocorrelation, reorientation, tortuosity...).
-    - Instantaneous velocity: Contains the study of the velocities. The Probability density function fitted with a distribution and several tests (moving average), as well as the comparision between the interpolated data and non-interpolated data. 
-    - Mean Squared Displacement: Code, figures and FIT of the MSD for several cases (homogenous, heterogeneous, using and without using linear interpolation...)
-    - Autocorrelation velocities: Code, figures and FIT of the Autocorrelation of the logarithm of the velocities. Again, it is compared with and without using linear interpolation.
-    - Urban planning perspective: Code and figures comparing the velocities of different schools and obtaining the optimal path, the reorientation, the tortuosity...
-    - Maximum Likelihood estimation: Code for the estimation of the exponential Ornstein-Uhlenbeck parametres and comparision between schools
+    - Data processing.ipynb:  Contains an explanation of the three stages of data processing and cleaning with examples and the linear interpolation procedure. 
+    - Functions. Mobility characterisation.ipynb: Contains a grouping of the functions used to perform the calculations and characterise the mobility (calculation of time increments, distances and velocities. The mean squared displacement, autocorrelation, reorientation, tortuosity...).
+    - Instantaneous velocity.ipynb: Contains the study of the velocities. The Probability density function fitted with a distribution and several tests (moving average), as well as the comparision between the interpolated data and non-interpolated data. 
+    - Mean Squared Displacement.ipynb: Code, figures and FIT of the MSD for several cases (homogenous, heterogeneous, using and without using linear interpolation...)
+    - Autocorrelation velocities.ipynb: Code, figures and FIT of the Autocorrelation of the logarithm of the velocities. Again, it is compared with and without using linear interpolation.
+    - Urban planning perspective.ipynb: Code and figures comparing the velocities of different schools and obtaining the optimal path, the reorientation, the tortuosity...
+    - Maximum Likelihood estimation.ipynb: Code for the estimation of the exponential Ornstein-Uhlenbeck parametres and comparision between schools
