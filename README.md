@@ -7,21 +7,21 @@ This repository contains the code and the mobility data used for the scientific 
     - Unnamed 0: Index of each row.
     - course: the direction in which the device is travelling, mesured in degrees and relative to the north.
     - haccuracy: radius of uncertainty for the location, mesured in metres.
-    - speed: instantaneous velocity of the device (obtaine by the Android/IOS servers) in metres/second.
+    - speed: instantaneous velocity of the device (obtained by the Android/IOS servers) in metres/second.
     - latitude: latitude coordinate in degrees
     - longitude: longitude coordinate in degrees
     - time: timestamp in which the geo-location is recorded
     - nickname: anonymous nickname of the participant
     
 
-2. The folder "processed data" contains the processed and cleaned data (a .csv file for each participant, with the same file-name as the raw data but adding the suffix _processed to each .csv file). The data is reduced to 83 users and 36,091 GPS locations. The column "Unnamed 0:" is removed from the data-set and 3 new columns are added corresponding to the time increment, the instantaneous velocity and the distance between GPS records.
+2. The folder "processed data" contains the processed and cleaned data (a .csv file for each participant, with the same file-name as the raw data but adding the suffix "_processed" to each .csv file. The data is reduced to 83 users and 36,091 GPS locations. The column "Unnamed 0:" is removed from the data-set and 3 new columns are added corresponding to the time increment, the instantaneous velocity and the distance between GPS records.
 
-    - $\Delta t$: time difference between consecutive records in seconds (computed in advance: $\Delta t (i) = t(i+1) - t(i)$. So the last element is NaN.
+    - $\Delta t$: time difference between consecutive records in seconds (computed in advance: $\Delta t (i) = t(i+1) - t(i)$. So the last element is NaN).
     - d: distance between consecutive GPS records in metres (computed in advance, so the last element is NaN).
     - v: instantaneous velcocity of each record in metres/second (distance over time difference). Again, the last element is NaN.
     
 
-3. The folder "processed and interpolated data" contains the processed and cleaned data as in the case above (processed data) but with the data interpolated in order to have all GPS locations uniformly separated by one second. Then the number of GPS locations is increased to 44,662 (83 users). The columns are the same as the processed files, but now all the values of $\Delta t" are 1.0 and then the columns d (distance) and v (velocity) provide the same value.
+3. The folder "processed and interpolated data" contains the processed and cleaned data as in the case above (processed data) but with the data interpolated in order to have all GPS locations uniformly separated by one second. Then the number of GPS locations is increased to 44,662 (83 users). The columns are the same as the processed files, but now all the values of $\Delta t$ are 1.0 and then the columns d (distance) and v (velocity) provide the same value. The file-names are the same as the raw data but adding the suffix "_interpolated" to each .csv file.
 
 
 4. The folder "Results. txt files" contains several .txt files with the results for the Mean Squared Displacement and the Autocorrelation for several cases (interpolated data, no interpolated data, confidence intervals, etc).
