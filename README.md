@@ -16,9 +16,9 @@ This repository contains the code and the mobility data used for the scientific 
 
 2. The folder "processed data" contains the processed and cleaned data (a .csv file for each participant, with the same file-name as the raw data but adding the suffix _processed to each .csv file). The data is reduced to 83 users and 36,091 GPS locations. The column "Unnamed 0:" is removed from the data-set and 3 new columns are added corresponding to the time increment, the instantaneous velocity and the distance between GPS records.
 
-    -$\Delta t$: time difference between consecutive records in seconds (computed in advance: $\Delta t (i) = t(i+1) - t(i)$. So the last element is NaN.
-    -d: distance between consecutive GPS records in metres (computed in advance, so the last element is NaN).
-    -v: instantaneous velcocity of each record in metres/second (distance over time difference). Again, the last element is NaN.
+    - $\Delta t$: time difference between consecutive records in seconds (computed in advance: $\Delta t (i) = t(i+1) - t(i)$. So the last element is NaN.
+    - d: distance between consecutive GPS records in metres (computed in advance, so the last element is NaN).
+    - v: instantaneous velcocity of each record in metres/second (distance over time difference). Again, the last element is NaN.
     
 
 3. The folder "processed and interpolated data" contains the processed and cleaned data as in the case above (processed data) but with the data interpolated in order to have all GPS locations uniformly separated by one second. Then the number of GPS locations is increased to 44,662 (83 users). The columns are the same as the processed files, but now all the values of $\Delta t" are 1.0 and then the columns d (distance) and v (velocity) provide the same value.
@@ -26,8 +26,8 @@ This repository contains the code and the mobility data used for the scientific 
 
 4. The folder "Results. txt files" contains several .txt files with the results for the Mean Squared Displacement and the Autocorrelation for several cases (interpolated data, no interpolated data, confidence intervals, etc).
 
-    -From the Jupyter Notebook "Mean Squared Displacement.ipynb": 
-    -From the Jupyter Notebook "Autocorrelation velocities.ipynb":
+    - From the Jupyter Notebook "Mean Squared Displacement.ipynb": 
+    - From the Jupyter Notebook "Autocorrelation velocities.ipynb":
 
 5. Regarding the code, there are several Python Notebooks that reproduce the mobility results and figures. All the notebooks contain a detailed description of the code and of the study.
 
