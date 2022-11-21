@@ -1,6 +1,8 @@
 # Pedestrian mobility in Schools: Beepath Project
 
-This repository contains the code and the mobility data used for the scientific publication. The data was collected through a citizen science experiment in which students from different schools in Barcelona participated to try to better understand the mobility around schools, as well as to find and solve possible access difficulties and improve urban furniture. Participants used a smartphone app to track their journey from home to school (or the other way around). The data collected for each user consists of an anonymized nickname, the geolocation (latitude and longitude) and the timestamp.
+This repository contains the code and the mobility data used for the scientific publication. The data was collected through a citizen science experiment in which students from 10 schools in Barcelona metropolitan area participated to try to better understand the mobility around schools, as well as to find and solve possible access difficulties and improve urban furniture. Participants used a smartphone app to track their journey from home to school (or the other way around). The data collected for each user consists of an anonymized nickname, the geolocation (latitude and longitude) and the timestamp. 
+
+The experiment took place on November, 2018. Each school chose one school day over a two-week period (from November 5 to November 16, 2018) to perform the data-acquisition. The collected data are homogenous (same age of the participants, 3rd and 4th grade of secondary school and similar weather conditions, favorable and with no exceptional climate events during the experiment).
 
 1. The folder "original data" contains the raw data collected in the experiment, composed of 262 csv-files (corresponding to each participant journey) and 161,009 GPS locations. The data-files contain 7 columns, which are:
 
