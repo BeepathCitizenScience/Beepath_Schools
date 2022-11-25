@@ -1,28 +1,30 @@
 # Pedestrian mobility in Schools: Beepath Project
 
-This repository contains the code and the mobility data used for the scientific publication. The data was collected through a citizen science experiment in which students from 10 schools in Barcelona metropolitan area participated to try to better understand the mobility around schools, as well as to find and solve possible access difficulties and improve urban furniture. Participants used a smartphone app to track their journey from home to school (or the other way around). The data collected for each user consists of an anonymized nickname, the geolocation (latitude and longitude) and the timestamp. 
+This repository contains the code used to study the mobility data in [1] used for the scientific publication. The data was collected through a citizen science experiment in which 262 students from 10 schools in Barcelona metropolitan area participated to try to better understand the mobility around schools, as well as to find and solve possible access difficulties and improve urban furniture. Participants used a smartphone app to track their journey from home to school (or the other way around). The data collected for each user consists of an anonymized nickname, the geolocation (latitude and longitude) and the timestamp. 
 
-The experiment took place on November, 2018. Each school chose one school day over a two-week period (from November 5 to November 16, 2018) to perform the data-acquisition. The collected data are homogenous (same age of the participants, 3rd and 4th grade of secondary school and similar weather conditions, favorable and with no exceptional climate events during the experiment).
+The experiment took place on November, 2018. Each school chose one school day over a two-week period (from November 5 to November 16, 2018) to perform the data-acquisition. The collected data are homogenous (same age of the participants, 3rd and 4th grade of secondary school and similar weather conditions, favorable and with no exceptional climate events during the experiment). This homogeneity allows to compare data from different schools.
 
-1. The folder "original data" contains the raw data collected in the experiment, composed of 262 csv-files (corresponding to each participant journey) and 161,009 GPS locations. The data-files contain 7 columns, which are:
+The data in the repository [1] consist of three folders containing the original collected data, the processed data and the processed and interpolated data:
 
-    - course: the direction in which the device is travelling, mesured in degrees and relative to the north.
-    - haccuracy: radius of uncertainty for the location, mesured in metres.
-    - speed: instantaneous velocity of the device (obtained by the Android/IOS servers) in metres/second.
-    - latitude: latitude coordinate in degrees
-    - longitude: longitude coordinate in degrees
-    - time: timestamp in which the geo-location is recorded
-    - nickname: anonymous nickname of the participant
-    
+    1. The folder "original data" contains the raw data collected in the experiment, composed of 262 csv-files (corresponding to each participant journey) and 161,009 GPS locations. The data-files contain 7 columns, which are:
 
-2. The folder "processed data" contains the processed and cleaned data (a .csv file for each participant, with the same file-name as the raw data but adding the suffix "_processed" to each .csv file. The data is reduced to 83 users and 36,091 GPS locations. The 3 new columns are added corresponding to the time increment, the instantaneous velocity and the distance between GPS records (so the number of columns is increased to 10).
+        - course: the direction in which the device is travelling, mesured in degrees and relative to the north.
+        - haccuracy: radius of uncertainty for the location, mesured in metres.
+        - speed: instantaneous velocity of the device (obtained by the Android/IOS servers) in metres/second.
+        - latitude: latitude coordinate in degrees
+        - longitude: longitude coordinate in degrees
+        - time: timestamp in which the geo-location is recorded
+        - nickname: anonymous nickname of the participant
 
-    - $\Delta t$: time difference between consecutive records in seconds (computed in advance: $\Delta t (i) = t(i+1) - t(i)$. So the last element is NaN).
-    - d: distance between consecutive GPS records in metres (computed in advance, so the last element is NaN).
-    - v: instantaneous velcocity of each record in metres/second (distance over time difference). Again, the last element is NaN.
-    
 
-3. The folder "processed and interpolated data" contains the processed and cleaned data as in the case above (processed data) but with the data interpolated in order to have all GPS locations uniformly separated by one second. Then the number of GPS locations is increased to 44,662 (83 users). The columns are the same as the processed files, but now all the values of $\Delta t$ are 1.0 and then the columns d (distance) and v (velocity) provide the same value. The file-names are the same as the raw data but adding the suffix "_interpolated" to each .csv file.
+    2. The folder "processed data" contains the processed and cleaned data (a .csv file for each participant, with the same file-name as the raw data but adding the suffix "_processed" to each .csv file. The data is reduced to 83 users and 36,091 GPS locations. The 3 new columns are added corresponding to the time increment,       the instantaneous velocity and the distance between GPS records (so the number of columns is increased to 10).
+
+        - $\Delta t$: time difference between consecutive records in seconds (computed in advance: $\Delta t (i) = t(i+1) - t(i)$. So the last element is NaN).
+        - d: distance between consecutive GPS records in metres (computed in advance, so the last element is NaN).
+        - v: instantaneous velcocity of each record in metres/second (distance over time difference). Again, the last element is NaN.
+
+
+    3. The folder "processed and interpolated data" contains the processed and cleaned data as in the case above (processed data) but with the data interpolated in order to have all GPS locations uniformly separated by one second. Then the number of GPS locations is increased to 44,662 (83 users). The columns are the same         as the processed files, but now all the values of $\Delta t$ are 1.0 and then the columns d (distance) and v (velocity) provide the same value. The file-names          are the same as the raw data but adding the suffix "_interpolated" to each .csv file.
 
 
 4. The folder "Results. txt files" contains several .txt files with the results for the Mean Squared Displacement and the Autocorrelation for several cases (interpolated data, no interpolated data, confidence intervals, etc).
@@ -64,3 +66,8 @@ The experiment took place on November, 2018. Each school chose one school day ov
     - Autocorrelation velocities.ipynb: Code, figures and FIT of the Autocorrelation of the logarithm of the velocities. Again, it is compared with and without using linear interpolation.
     - Urban planning perspective.ipynb: Code and figures comparing the velocities of different schools and obtaining the optimal path, the reorientation, the tortuosity...
     - Maximum Likelihood estimation.ipynb: Code for the estimation of the exponential Ornstein-Uhlenbeck parametres and comparision between schools
+    
+    
+    
+[1] Larroya, F. & Perelló, J. Home-to-school pedestrian mobility GPS data from a citizen science experiment in the Barcelona area. Repositori de Dades de Recerca. https://doi.org/10.34810/data523 (2022).
+
