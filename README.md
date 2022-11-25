@@ -6,7 +6,7 @@ The experiment took place on November, 2018. Each school chose one school day ov
 
 The data in the repository [1] consist of three folders containing the original collected data, the processed data and the processed and interpolated data:
 
-    1. The folder "original data" contains the raw data collected in the experiment, composed of 262 csv-files (corresponding to each participant journey) and 161,009 GPS locations. The data-files contain 7 columns, which are:
+1. The folder "original data" contains the raw data collected in the experiment, composed of 262 csv-files (corresponding to each participant journey) and 161,009 GPS locations. The data-files contain 7 columns, which are:
 
         - course: the direction in which the device is travelling, mesured in degrees and relative to the north.
         - haccuracy: radius of uncertainty for the location, mesured in metres.
@@ -17,17 +17,18 @@ The data in the repository [1] consist of three folders containing the original 
         - nickname: anonymous nickname of the participant
 
 
-    2. The folder "processed data" contains the processed and cleaned data (a .csv file for each participant, with the same file-name as the raw data but adding the suffix "_processed" to each .csv file. The data is reduced to 83 users and 36,091 GPS locations. The 3 new columns are added corresponding to the time increment,       the instantaneous velocity and the distance between GPS records (so the number of columns is increased to 10).
+2. The folder "processed data" contains the processed and cleaned data (a .csv file for each participant, with the same file-name as the raw data but adding the suffix "_processed" to each .csv file. The data is reduced to 83 users and 36,091 GPS locations. The 3 new columns are added corresponding to the time increment,       the instantaneous velocity and the distance between GPS records (so the number of columns is increased to 10).
 
         - $\Delta t$: time difference between consecutive records in seconds (computed in advance: $\Delta t (i) = t(i+1) - t(i)$. So the last element is NaN).
         - d: distance between consecutive GPS records in metres (computed in advance, so the last element is NaN).
         - v: instantaneous velcocity of each record in metres/second (distance over time difference). Again, the last element is NaN.
 
 
-    3. The folder "processed and interpolated data" contains the processed and cleaned data as in the case above (processed data) but with the data interpolated in order to have all GPS locations uniformly separated by one second. Then the number of GPS locations is increased to 44,662 (83 users). The columns are the same         as the processed files, but now all the values of $\Delta t$ are 1.0 and then the columns d (distance) and v (velocity) provide the same value. The file-names          are the same as the raw data but adding the suffix "_interpolated" to each .csv file.
+3. The folder "processed and interpolated data" contains the processed and cleaned data as in the case above (processed data) but with the data interpolated in order to have all GPS locations uniformly separated by one second. Then the number of GPS locations is increased to 44,662 (83 users). The columns are the same         as the processed files, but now all the values of $\Delta t$ are 1.0 and then the columns d (distance) and v (velocity) provide the same value. The file-names          are the same as the raw data but adding the suffix "_interpolated" to each .csv file.
 
 
-4. The folder "Results. txt files" contains several .txt files with the results for the Mean Squared Displacement and the Autocorrelation for several cases (interpolated data, no interpolated data, confidence intervals, etc).
+
+The folder "Results. txt files" contains several .txt files with the results for the Mean Squared Displacement and the Autocorrelation for several cases (interpolated data, no interpolated data, confidence intervals, etc).
 
     - The Jupyter Notebook "Mean Squared Displacement.ipynb" generates: 
         
