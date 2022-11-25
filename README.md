@@ -28,7 +28,7 @@ The data in the repository [1] consist of three folders containing the original 
 
 
 
-The folder "Results. txt files" contains several .txt files with the results for the Mean Squared Displacement and the Autocorrelation for several cases (interpolated data, no interpolated data, confidence intervals, etc).
+The folder "Results. txt files" in this repository contains several .txt files with the results for the Mean Squared Displacement and the Autocorrelation for several cases (interpolated data, no interpolated data, confidence intervals, etc).
 
     - The Jupyter Notebook "Mean Squared Displacement.ipynb" generates: 
         
